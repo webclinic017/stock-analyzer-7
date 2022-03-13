@@ -117,3 +117,22 @@ with st.form(key='form'):
                 daily_cummulative_simple_return, x=daily_cummulative_simple_return.index, y=daily_cummulative_simple_return.columns, title="Daily Cummulative Simple returns/growth of investment", labels={"x":"Date", "y":"Growth of ₨ 1 investment"})
 
             st.plotly_chart(daily_cummulative_simple_return_plot)
+            st.balloons()
+
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            footer:after {
+                content:"Made with 💓 by Chandra Sekhar Mullu"; 
+                visibility: visible;
+                display: block;
+                position: relative;
+                #background-color: red;
+                padding: 5px;
+                top: 2px;
+            }
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
